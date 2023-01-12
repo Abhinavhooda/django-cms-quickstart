@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load cms_tags menu_tags sekizai_tags static i18n %}{% spaceless %}
+<!DOCTYPE html>{% load cms_tags menu_tags sekizai_tags static i18n %}{%{% load menu_tags %}%}{% spaceless %}
     <html lang="{{ LANGUAGE_CODE }}">
         <head>
             <meta charset="utf-8"/>
@@ -19,6 +19,9 @@
             {% block base_css %}{% endblock %}
 {% endspaceless %}{% render_block 'css' %}{% spaceless %}
     {% block page_head %}{% endblock %}
+    <ul class="nav">
+        {% show_menu 0 100 100 100 %}
+    </ul>
     </head>
     <body {% block body_attrs %}{% endblock %}>
 {% endspaceless %}{% cms_toolbar %}{% spaceless %}
