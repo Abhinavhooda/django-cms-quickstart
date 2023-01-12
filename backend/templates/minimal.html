@@ -8,5 +8,10 @@
         {% cms_toolbar %}
         {% placeholder "Content" %}
         {% render_block "js" %}
+        {% block content %}
+            {% placeholder "feature" %}
+            {% placeholder "content" %}
+            {% placeholder "splashbox" %}
+        {% endblock content %}
     </body>
 </html>
