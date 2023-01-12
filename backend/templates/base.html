@@ -27,9 +27,9 @@
         {% placeholder "Content" %}
     {% endblock content %}
     {% block base_js %}{% endblock %}
-    <footer>
-        {% static_placeholder 'footer' %}
-    </footer>
+<footer>
+    {% static_placeholder 'footer' %}
+</footer>
 {% endspaceless %}{% render_block 'js' %}{% spaceless %}
     {% block end_js %}{% endblock %}
     {% block bottom_css %}{% endblock %}
